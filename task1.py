@@ -1,3 +1,8 @@
+"""
+Perhaps, it would be rewarding to work with separate channels,
+but for now I cannot offer a better solution, unfortunately.
+"""
+
 import cv2
 import numpy as np
 
@@ -62,9 +67,8 @@ if __name__ == '__main__':
               ColorRange("red", np.array([170, 120, 70]), np.array([180, 255, 255]))]
 
     extractor = ExtractGeometry("input_video.avi", "output_video.avi",
-                                video_writer_type=cv2.VideoWriter_fourcc('M','J','P','G'),#cv2.VideoWriter_fourcc(*"XVID"),
+                                video_writer_type=cv2.VideoWriter_fourcc(*"XVID"),
                                 colors_to_extract=colors, video_delay=10)
-
     extractor.run()
 
 
